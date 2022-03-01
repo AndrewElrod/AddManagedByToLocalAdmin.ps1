@@ -5,7 +5,7 @@ $CompanyRegistryKey = 'Company'
 $OwnerRegistryPath = 'HKLM:\Software\Company\'
 $OwnerRegistryKey = 'Owner'
 $ManagedByStringProperty = 'ManagedBy'
-#This Creates the top EPA Registry Key if it doesn't exist.
+#This Creates the top COMPANY Registry Key if it doesn't exist.
 If (!(Test-Path ($CompanyRegistryPath+$CompanyRegistryKey))){
 	New-Item -Path $CompanyRegistryPath -Name $CompanyRegistryKey
 	Write-host 'Created Company RegistryKey'
